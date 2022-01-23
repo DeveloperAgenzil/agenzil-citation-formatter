@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Iitem } from './selection.interface';
+import { Iitem } from './Interfaces/selection.interface';
 
 @Component({
   selector: 'my-app',
