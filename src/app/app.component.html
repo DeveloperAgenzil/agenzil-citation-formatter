@@ -1,5 +1,6 @@
 <h1>Citation Formatter</h1>
 <select>
-  <option value="1">YouTube video</option>
-  <option value="2">Option 2</option>
+  <option *ngFor="let item of items" value="{{ item.id }}">
+    {{item.name}}
+  </option>
 </select>
