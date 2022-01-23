@@ -22,4 +22,7 @@ export class AppComponent {
   public OnDifferentItemSelected() {
     console.log(this.selectedItemId);
   }
+  public OnAuthorValueChanged() {
+    console.log('test');
+  }
 }

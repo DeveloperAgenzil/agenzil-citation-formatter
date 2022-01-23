@@ -1,12 +1,14 @@
 <h1>Citation Formatter</h1>
 
-<button (click)="ResetSelectedItemId()" (change)="OnDifferentItemSelected()">
-  Reset selection
-</button>
-<select [(ngModel)]="selectedItemId">
+<button>Copy citation</button><textarea readonly="true"></textarea> <br /><br />
+
+<button (click)="ResetSelectedItemId()">Reset selection</button>
+<select [(ngModel)]="selectedItemId" (change)="OnDifferentItemSelected()">
   <option *ngFor="let item of items" value="{{ item.id }}">
     {{ item.name }}
   </option>
 </select>
 
 <p>{{ selectedItemId }}</p>
+
+<label>User name:</label><textarea (change)="OnAuthorValueChanged()"></textarea>
