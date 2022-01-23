@@ -1,6 +1,12 @@
 <h1>Citation Formatter</h1>
-<select>
+
+<button (click)="ResetSelectedItemId()" (change)="OnDifferentItemSelected()">
+  Reset selection
+</button>
+<select [(ngModel)]="selectedItemId">
   <option *ngFor="let item of items" value="{{ item.id }}">
-    {{item.name}}
+    {{ item.name }}
   </option>
 </select>
+
+<p>{{ selectedItemId }}</p>
