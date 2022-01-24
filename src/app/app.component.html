@@ -1,11 +1,9 @@
 <div style="margin: auto; width: 70%;">
-  <h1>Citation Formatter</h1>
+  <h1 style="text-align: center;">Citation Formatter</h1>
 
-  <textarea
-    readonly="true"
-    style="width: 800px; height: 120px; resize: none; font-size: 20px;"
-    >{{ citationString }}</textarea
-  >
+  <textarea name="citationTextArea" readonly="true">{{
+    citationString
+  }}</textarea>
 
   <button name="copyCitationButton" (click)="FormatCitationString(nameInput)">
     Copy citation
