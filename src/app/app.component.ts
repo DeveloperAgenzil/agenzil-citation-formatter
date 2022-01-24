@@ -19,10 +19,10 @@ export class AppComponent {
     { id: 2, name: 'Book: no auth.' },
   ];
 
-  public OnDifferentItemSelected() {
+  public GetSelectedItemId() {
     console.log(this.selectedItemId);
   }
-  public OnAuthorValueChanged() {
-    console.log('test');
+  public FormatNameInput(event) {
+    console.log(event.target.value);
   }
 }

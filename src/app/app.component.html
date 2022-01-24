@@ -3,7 +3,8 @@
 <button>Copy citation</button><textarea readonly="true"></textarea> <br /><br />
 
 <button (click)="ResetSelectedItemId()">Reset selection</button>
-<select [(ngModel)]="selectedItemId" (change)="OnDifferentItemSelected()">
+
+<select [(ngModel)]="selectedItemId" (change)="GetSelectedItemId()">
   <option *ngFor="let item of items" value="{{ item.id }}">
     {{ item.name }}
   </option>
@@ -11,4 +12,5 @@
 
 <p>{{ selectedItemId }}</p>
 
-<label>User name:</label><textarea (change)="OnAuthorValueChanged()"></textarea>
+<label>Name (of author/uploader): </label>
+<input type="text" (keyup)="FormatNameInput($event)" />
