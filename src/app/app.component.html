@@ -11,9 +11,15 @@
 
   <br /><br />
 
-  <button (click)="ResetSelectedItemId()">Reset selection</button>
+  <button name="resetSelectedItemButton" (click)="ResetSelectedItemId()">
+    Reset selection
+  </button>
 
-  <select [(ngModel)]="selectedItemId" (change)="GetSelectedItemId()">
+  <select
+    name="itemDropdownMenu"
+    [(ngModel)]="selectedItemId"
+    (change)="GetSelectedItemId()"
+  >
     <option *ngFor="let item of items" value="{{ item.id }}">
       {{ item.name }}
     </option>
@@ -21,6 +27,6 @@
 
   <p>{{ selectedItemId }}</p>
 
-  <label>Name (of author/uploader): </label>
+  <label>{{nameLabel}}</label>
   <input type="text" #nameInput (keyup)="FormatNameInput($event)" />
 </div>

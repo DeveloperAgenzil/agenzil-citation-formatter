@@ -32,3 +32,37 @@ button:hover[name='copyCitationButton'] {
   background-color: #8aa18a; /* Green */
   color: white;
 }
+
+button[name='resetSelectedItemButton'] {
+  float: left;
+  background-color: #444c45;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+button:hover[name='resetSelectedItemButton'] {
+  background-color: #8aa18a; /* Green */
+  color: white;
+}
+
+select[name='itemDropdownMenu'] {
+  float: right;
+  background-color: rgb(212, 191, 191);
+  border-radius: 5px;
+  cursor: pointer;
+  width: 1155px;
+  height: 40px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

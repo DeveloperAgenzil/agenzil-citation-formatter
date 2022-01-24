@@ -9,6 +9,7 @@ import { Iitem } from './Interfaces/selection.interface';
 export class AppComponent {
   public selectedItemId: number = 0;
   public citationString: string;
+  public nameLabel: string = 'Name: ';
 
   public ResetSelectedItemId() {
     this.selectedItemId = 0;
@@ -21,9 +22,14 @@ export class AppComponent {
   ];
 
   public FormatCitationString(nameInput) {
-    this.citationString = nameInput.value + 'test';
+    this.citationString = 'Copied: ' + nameInput.value;
   }
   public GetSelectedItemId() {
+    if (this.selectedItemId == 1) {
+      this.nameLabel = "Uploader's name: ";
+    } else if (this.selectedItemId == 2) {
+      this.nameLabel = "Author's name: ";
+    }
     console.log(this.selectedItemId);
   }
   public FormatNameInput(event) {
