@@ -8,6 +8,7 @@ import { Iitem } from './Interfaces/selection.interface';
 })
 export class AppComponent {
   public selectedItemId: number = 0;
+  public citationString: string;
 
   public ResetSelectedItemId() {
     this.selectedItemId = 0;
@@ -19,10 +20,13 @@ export class AppComponent {
     { id: 2, name: 'Book: no auth.' },
   ];
 
+  public FormatCitationString(nameInput) {
+    this.citationString = nameInput.value + 'test';
+  }
   public GetSelectedItemId() {
     console.log(this.selectedItemId);
   }
   public FormatNameInput(event) {
-    console.log(event.target.value);
+    this.citationString = event.target.value;
   }
 }

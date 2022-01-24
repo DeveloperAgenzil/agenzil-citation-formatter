@@ -1,16 +1,28 @@
-<h1>Citation Formatter</h1>
+<div style="margin: auto; width: 70%;">
+  <h1>Citation Formatter</h1>
 
-<button>Copy citation</button><textarea readonly="true"></textarea> <br /><br />
+  <textarea
+    readonly="true"
+    style="width: 800px; height: 120px; resize: none; font-size: 20px;"
+    >{{ citationString }}</textarea
+  >
 
-<button (click)="ResetSelectedItemId()">Reset selection</button>
+  <button name="copyCitationButton" (click)="FormatCitationString(nameInput)">
+    Copy citation
+  </button>
 
-<select [(ngModel)]="selectedItemId" (change)="GetSelectedItemId()">
-  <option *ngFor="let item of items" value="{{ item.id }}">
-    {{ item.name }}
-  </option>
-</select>
+  <br /><br />
 
-<p>{{ selectedItemId }}</p>
+  <button (click)="ResetSelectedItemId()">Reset selection</button>
 
-<label>Name (of author/uploader): </label>
-<input type="text" (keyup)="FormatNameInput($event)" />
+  <select [(ngModel)]="selectedItemId" (change)="GetSelectedItemId()">
+    <option *ngFor="let item of items" value="{{ item.id }}">
+      {{ item.name }}
+    </option>
+  </select>
+
+  <p>{{ selectedItemId }}</p>
+
+  <label>Name (of author/uploader): </label>
+  <input type="text" #nameInput (keyup)="FormatNameInput($event)" />
+</div>

@@ -1,3 +1,24 @@
 p {
   font-family: Lato;
 }
+
+button[name='copyCitationButton'] {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 400px;
+  height: 120px;
+  margin: 5px;
+}
+
+button:hover[name='copyCitationButton'] {
+  background-color: #8aa18a; /* Green */
+  color: white;
+}
